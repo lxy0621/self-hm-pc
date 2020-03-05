@@ -1,0 +1,55 @@
+==========================================DAY1=================================
+
+api : axios相关代码
+assets : 静态资源
+components : 公用级别组件
+router : 路由
+store : 本地存储
+views : 路由级别组件
+App.vue : 根组件
+main : 入口函数
+style : less
+---------------------------------
+开发登录模块：
+
+- 创建登录分支：git branch login
+- 切换到登录分支：git checkout login
+  - 进行编码，若干次提交
+  - git add . 暂存区
+  - git commit -m '备注信息'
+  - ...
+  - 登录功能完毕：
+    - 切换master分支 ： git checkout master
+    - 合并login分支代码：git merge login
+
+----------------------------------
+elementUI使用
+1.npm i element-ui
+2.main.js =>
+     import ElementUi from 'element-ui' 
+     import 'element-ui/lib/theme-chalk/index.css'
+     Vue.use(ElementUi)
+
+----------------配置路由------------------
+※npm i vue-router
+
+※router-index.js =>
+
+    import VueRouter from 'vue-router'
+    import Vue from 'vue'
+
+    Vue.use(VueRouter)
+
+    const router = new VueRouter({
+        routes: []
+    })
+
+    export default router
+
+※main.js => 
+
+    import router from '@/router'
+
+    new Vue({
+        +router,
+    })
